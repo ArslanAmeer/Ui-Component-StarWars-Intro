@@ -1,0 +1,213 @@
+@font-face {
+    font-family: SfDistantGalaxy;
+    src: url(SfDistantGalaxy-0l3d.ttf) format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "SfDistantGalaxy", arial, verdana, sans-serif;
+    font-weight: 700;
+    color: #ff6;
+    /* background-color: #000; */
+    overflow: hidden;
+}
+
+
+h1 {
+    width: 2.6em;
+    font-size: 10em;
+    text-align: center;
+    margin-left: -1.3em;
+    line-height: 0.8em;
+    color: #6e6e6e;
+    text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+}
+
+h1.title {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-animation: logo 10s ease-out .5s;
+    -moz-animation: logo 10s ease-out .5s;
+    -ms-animation: logo 10s ease-out .5s;
+    -o-animation: logo 10s ease-out .5s;
+    animation: logo 10s ease-out .5s;
+}
+
+#intro {
+    position: absolute;
+    width: 23em;
+    height: 50em;
+    bottom: 0;
+    left: 50%;
+    /* margin-left: -9em; */
+    font-family: SfDistantGalaxy;
+    font-size: 300%;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+    font-weight: bold;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: perspective(300px) rotateX(25deg);
+    -moz-transform: perspective(300px) rotateX(25deg);
+    -ms-transform: perspective(300px) rotateX(25deg);
+    -o-transform: perspective(300px) rotateX(25deg);
+    transform: perspective(300px) rotateX(25deg) translateX(-50%);
+    color: grey;
+}
+
+#intro:after {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, transparent 100%);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, transparent 100%);
+    background-image: linear-gradient(top, rgba(255, 255, 255, 1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+#intro-content {
+    position: absolute;
+    top: 100%;
+    -webkit-animation: scroll 80s linear 2s infinite;
+    -moz-animation: scroll 80s linear 2s infinite;
+    -ms-animation: scroll 80s linear 2s infinite;
+    -o-animation: scroll 80s linear 2s infinite;
+    animation: scroll 80s linear 2s infinite;
+}
+
+h2 {
+    font-size: 100px;
+    text-align: center;
+    line-height: 0.8em;
+    color: #6e6e6e;
+    margin-top: 200px;
+    word-spacing: -0.3em;
+    text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+}
+
+@media (max-width: 568px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    #intro {
+        width: 90%;
+    }
+
+    #intro-content {
+        font-size: 20px;
+    }
+}
+
+/* -------------- Animation Keyframes (Cross Browser) --------------*/
+
+@-webkit-keyframes logo {
+    0% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes logo {
+    0% {
+        -moz-transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes logo {
+    0% {
+        -ms-transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -ms-transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes logo {
+    0% {
+        -o-transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -o-transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+@keyframes logo {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -60%;
+    }
+}
